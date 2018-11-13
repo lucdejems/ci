@@ -4,6 +4,7 @@ node_js:
 cache:
   yarn: true
 before_deploy: yarn global add now
+script: bash scripts/deploy_review_app.sh
 deploy:
   - provider: script
     script: now --token $NOW_TOKEN --public
